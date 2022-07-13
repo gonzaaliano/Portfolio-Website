@@ -9,27 +9,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <header>
         <a class="logo" href="#">Gonza Aliano</a>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#intro">About</a></li>
             <li><a href="#">CV</a></li>
-            <li><a href="#">Trabajo</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
     <section class="banner"></section>
 
-    <section class="intro">
-        <h1>Fullstack Web Developer.</h1>
-        <h3>Hello! My name is Gonzalo and I´m a Fullstack Web Developer in Python. My journey with programming began 2
-            years
-            ago with different tutorials on Youtube and courses. On the year 2022 I ended my Fullstack Dev Course in
-            Python and next year I will be studying Informatics Engineering.</h3>
+    <section class="intro" id="intro">
+        <div class="intro-text">
+            <h1>Fullstack Web Developer.</h1>
+            <h3>Hello! My name is Gonzalo and I´m a Junior Fullstack Web Developer in Python. My journey with
+                programming began 2
+                years
+                ago with different tutorials on Youtube and courses. On the year 2022 I ended my Fullstack Dev Course in
+                Python and next year I will be studying Informatics Engineering.</h3>
+        </div>
+
     </section>
 
     <section class="intro-2">
@@ -54,7 +59,7 @@
                 <li>Flask</li>
                 <li>Django</li>
                 <li>MYSQL</li>
-            </ul>    
+            </ul>
         </div>
 
 
@@ -74,10 +79,46 @@
     </section>
 
     <section class="projects">
-        <h1>Projects</h1>
+        <h1 class="section-projects-title">Projects</h1>
+        <div class="card-container">
+            <div class="card">
+                <img src="/assets/bg.jpg" alt="">
+                <h4 class="card-title">Estudio Callegari</h4>
+                <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat rerum
+                    necessitatibus corporis, esse quae natus.</p>
+            </div>
+            <div class="card">
+                <img src="/assets/bg.jpg" alt="">
+                <h4 class="card-title">Powestroke Gym</h4>
+                <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat rerum
+                    necessitatibus corporis, esse quae natus.</p>
+            </div>
+            <div class="card">
+                <img src="/assets/bg.jpg" alt="">
+                <h4 class="card-title">Codo a Codo Web App</h4>
+                <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat rerum
+                    necessitatibus corporis, esse quae natus.</p>
+            </div>
+        </div>
+
     </section>
 
-    <section class="contact"></section>
+    <section class="contact-container" id="contact">
+        <div class="contact-text">
+            <h1>Send me a message!</h1>
+            <h3>Got a question or proposal, or just want
+                to say hello? Go ahead.</h3>
+        </div>
+        <div class="contact-form">
+            <form action="" class="contact-form" id="contact-form">
+                <input type="text" name="name" id="name" class="name" placeholder="Enter your name">
+                <input type="email" name="email" id="email" class="email" placeholder="Enter your email adress">
+                <textarea name="message" id="message" class="message" cols="30" rows="10" placeholder="Write message here..."></textarea>
+                <input type="submit" value="Send" class="send-btn">
+            </form>
+        </div>
+
+    </section>
 
     <footer>
         <div class="footer-main">
@@ -107,8 +148,21 @@
 
     </footer>
 
-
+    
     <script src="/js/app.js"></script>
+    
+    <!-- EMAIL JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("V7yLRmeVcgh3yOax4");
+        })();
+    </script>
+
+    <!-- SWEET ALERT -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </body>
 
 </html>
