@@ -1,16 +1,20 @@
+@charset "UTF-8";
+/*ESTILOS GENERALES*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: #000;
+  background-color: #000;
   min-height: 200vh;
   color: #FFF;
 }
 
+/*BARRA NAVEGACIÓN*/
 header {
   position: fixed;
   top: 0;
@@ -75,23 +79,31 @@ header .sticky ul li a {
   background-size: cover;
 }
 
+/*SECCIÓN INTRO*/
 .intro {
+  background-color: #000;
+}
+.intro .intro-text {
   width: 100%;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   align-items: flex-start;
+  padding-left: 3em;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
-.intro h1 {
+.intro .intro-text h1 {
   font-size: 3.5rem;
-  padding: 3em 3em 3em 3em;
+  margin-bottom: 2em;
 }
-.intro h3 {
-  margin-left: 6em;
-  padding: 3em 3em;
-  font-weight: 400;
+.intro .intro-text h3 {
+  font-weight: 300;
+  margin-bottom: 3em;
+  width: 95%;
 }
 
+/*SECCIÓN INTRO 2*/
 .intro-2 {
   background-color: #FFF;
   color: #000;
@@ -118,10 +130,102 @@ header .sticky ul li a {
   font-size: 3rem;
 }
 
+/*SECCIÓN LAST YEARS*/
 .last-years {
   background-color: #92ad94;
 }
 
+/*SECCIÓN PROJECTS*/
+.projects {
+  background-color: #fff;
+  padding-bottom: 3em;
+}
+.projects h1 {
+  color: #000;
+  text-align: center;
+  padding-top: 2em;
+  margin-bottom: 2.5em;
+  font-size: 3em;
+}
+.projects .card-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.projects .card-container .card {
+  margin-left: 3em;
+  border: 2px solid #000;
+  border-radius: 5px;
+  color: #000;
+}
+.projects .card-container .card img {
+  width: 100%;
+}
+.projects .card-container .card h4 {
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+}
+.projects .card-container .card p {
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  margin-bottom: 0.75em;
+}
+
+/*SECCIÓN CONTACTO*/
+.contact-container .contact-text {
+  text-align: center;
+  margin-bottom: 3.5em;
+  margin-top: 3.5em;
+}
+.contact-container .contact-text h1 {
+  font-size: 2.5rem;
+}
+.contact-container .contact-text h3 {
+  font-size: 1.5rem;
+}
+.contact-container .contact-form {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 3em;
+  width: 100%;
+  display: grid;
+  row-gap: 1rem;
+}
+.contact-container .contact-form input {
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  padding: 15px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 0.4rem;
+}
+.contact-container .contact-form textarea {
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  padding: 15px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 0.4rem;
+}
+.contact-container .contact-form .send-btn {
+  background-color: #92ad94;
+  max-width: 120px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding: 12px;
+  cursor: pointer;
+  transition: color 0.8s linear;
+}
+.contact-container .contact-form .send-btn:hover {
+  background-color: #fff;
+  color: #92ad94;
+  transition: 0.5s;
+}
+
+/* FOOTER CONTENT*/
 footer {
   background-color: #92ad94;
 }
