@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,14 +19,14 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="#intro">About</a></li>
             <li><a href="#">CV</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
     <section class="banner"></section>
 
     <section class="intro" id="intro">
-        <div class="intro-text">
+        <div class="intro-text" data-aos="fade-up">
             <h1>Fullstack Web Developer.</h1>
             <h3>Hello! My name is Gonzalo and I´m a Junior Fullstack Web Developer in Python. My journey with
                 programming began 2
@@ -37,16 +37,29 @@
 
     </section>
 
-    <section class="intro-2">
+    <section class="intro-2" data-aos="fade-up">
         <div class="frontend">
             <h1>Frontend</h1>
             <p>I like to craft solid and scalable frontend products with great user experiences.</p>
             <h5>Some technologies I’ve been working with:</h5>
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Vue.js</li>
+                <div class="icons">
+                    <box-icon name='html5' type='logo' animation='flashing'>HTML</box-icon>
+                    <li>HTML</li>
+                </div>
+                <div class="icons">
+                    <box-icon name='css3' type='logo' animation='flashing'></box-icon>
+                    <li>CSS</li>
+                </div>
+                <div class="icons">
+                    <box-icon name='javascript' type='logo' animation='flashing'></box-icon>
+                    <li>JavaScript</li>
+                </div>
+                <div class="icons">
+                    <box-icon name='vuejs' type='logo' animation='flashing'></box-icon>
+                    <li>Vue.js</li>
+                </div>
+
             </ul>
         </div>
 
@@ -55,10 +68,22 @@
             <p>I have some basic knowledge on backend and MYSQL server.</p>
             <h5>Here are a few technologies I’ve been working with recently:</h5>
             <ul>
-                <li>Python</li>
-                <li>Flask</li>
-                <li>Django</li>
-                <li>MYSQL</li>
+                <div class="icons">
+                    <box-icon name='python' type='logo' animation='flashing'></box-icon>
+                    <li>Python</li>
+                </div>
+                <div class="icons">
+                    <box-icon name='flask' type='logo' animation='flashing'></box-icon>
+                    <li>Flask</li>
+                </div>
+                <div class="icons">
+                    <box-icon name='django' type='logo' animation='flashing'></box-icon>
+                    <li>Django</li>
+                </div>
+                <div class="icons">
+                    <li>MYSQL</li>
+                </div>
+
             </ul>
         </div>
 
@@ -78,32 +103,28 @@
             Recusandae iste, natus neque assumenda ipsum nostrum labore!</p>
     </section>
 
-    <section class="projects">
+    <section class="projects" data-aos="fade-up" id="projects">
         <h1 class="section-projects-title">Projects</h1>
         <div class="card-container">
             <div class="card">
-                <img src="/assets/bg.jpg" alt="">
-                <h4 class="card-title">Estudio Callegari</h4>
-                <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat rerum
-                    necessitatibus corporis, esse quae natus.</p>
+                <a href="https://callegariyasociadosabogados.com" target="_blank"><img
+                        src="/assets/callegariyascodiados.jpeg" alt="estudio-callegari"></a>
+                <h4 class="card-title">Estudio Callegari y Asociados</h4>
             </div>
             <div class="card">
-                <img src="/assets/bg.jpg" alt="">
-                <h4 class="card-title">Powestroke Gym</h4>
-                <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat rerum
-                    necessitatibus corporis, esse quae natus.</p>
+                <a href="https://powerstrokegym.netlify.app"><img src="/assets/powerstrokegym.jpeg"
+                        alt="powerstrokegym"></a>
+                <h4 class="card-title">Powerstroke Gym</h4>
             </div>
             <div class="card">
-                <img src="/assets/bg.jpg" alt="">
+                <img src="/assets/codoacodo.jpeg" alt="">
                 <h4 class="card-title">Codo a Codo Web App</h4>
-                <p class="card-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat rerum
-                    necessitatibus corporis, esse quae natus.</p>
             </div>
         </div>
 
     </section>
 
-    <section class="contact-container" id="contact">
+    <section class="contact-container" id="contact" data-aos="fade-up">
         <div class="contact-text">
             <h1>Send me a message!</h1>
             <h3>Got a question or proposal, or just want
@@ -113,7 +134,8 @@
             <form action="" class="contact-form" id="contact-form">
                 <input type="text" name="name" id="name" class="name" placeholder="Enter your name">
                 <input type="email" name="email" id="email" class="email" placeholder="Enter your email adress">
-                <textarea name="message" id="message" class="message" cols="30" rows="10" placeholder="Write message here..."></textarea>
+                <textarea name="message" id="message" class="message" cols="30" rows="10"
+                    placeholder="Write message here..."></textarea>
                 <input type="submit" value="Send" class="send-btn">
             </form>
         </div>
@@ -121,18 +143,18 @@
     </section>
 
     <footer>
-        <div class="footer-main">
+        <div class="footer-main" data-aos="fade-up">
             <div class="div-footer-1">
                 <h4>Say Hello</h4>
-                <p>gonzaaliano@hotmail.com</p>
-                <p>Telegram</p>
-                <p>Whatsapp</p>
+                <a href="mailto: gonzaaliano@hotmail.com">gonzaaliano@hotmail.com</a>
+                <a href="https://t.me/Gonzaaliano">Telegram</a>
+                <a href="https://wa.me/1130084171">Whatsapp</a>
             </div>
 
             <div class="div-footer-2">
-                <p>My Work</p>
-                <p>My Shelf</p>
-                <p>My Resumé</p>
+                <a href="">My Work</a>
+                <a href="">My Shelf</a>
+                <a href="">My Resumé</a>
             </div>
         </div>
 
@@ -148,9 +170,9 @@
 
     </footer>
 
-    
+
     <script src="/js/app.js"></script>
-    
+
     <!-- EMAIL JS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
@@ -163,6 +185,19 @@
     <!-- SWEET ALERT -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    <!-- BOXICONS -->
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+
+    <!-- ANIMATE ON SCROLL -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            delay: 30
+
+        });
+    </script>
 </body>
 
 </html>
