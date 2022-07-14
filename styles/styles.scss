@@ -37,7 +37,13 @@ header {
         font-size: 2em;
         text-transform: uppercase;
         letter-spacing: 2px;
-        transition: ease-in 0.8s;
+        transition: ease-in 0.4s;
+
+        &:hover {
+            background-color: #92ad94;
+            border-radius: 30px;
+            padding: 0.4em;
+        }
     }
 
     ul {
@@ -50,6 +56,12 @@ header {
             list-style: none;
             position: relative;
             color: #FFF;
+            transition: all 500ms;
+
+            &:hover {
+                background-color: #92ad94;
+                border-radius: 10px;
+            }
 
             a {
                 position: relative;
@@ -131,7 +143,7 @@ header .sticky {
     text-align: center;
     align-items: flex-start;
 
-    div {
+    .frontend {
         margin-top: 6em;
         margin-bottom: 10em;
         padding: 1em 1em 1em 1em;
@@ -141,9 +153,35 @@ header .sticky {
         ul {
             list-style: none;
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
             margin-top: 1.5em;
+            .icons{
+                margin-right: 5em;
+                box-icon{
+                    font-size: 5em;
+                }
+            }
+        }
+    }
+
+    .backend {
+        margin-top: 6em;
+        margin-bottom: 10em;
+        padding: 1em 1em 1em 1em;
+        justify-content: flex-start;
+        align-items: flex-start;
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 1.5em;
+            .icons{
+                margin-right: 3em;
+            }
         }
     }
 
@@ -163,7 +201,8 @@ header .sticky {
 .projects {
     background-color: #fff;
     padding-bottom: 3em;
-    h1{
+
+    h1 {
         color: #000;
         text-align: center;
         padding-top: 2em;
@@ -177,18 +216,27 @@ header .sticky {
         flex-direction: row;
 
         .card {
+            max-width: 300px;
             margin-left: 3em;
-            border: 2px solid #000;
-            border-radius: 5px;
+            box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+            border-radius: 10px;
             color: #000;
+            transition: all 400ms;
+            text-align: center;
+
+            &:hover {
+                transform: scale(1.1);
+            }
 
             img {
-                width: 100%;
+                max-width: 300px;
             }
 
             h4 {
+                font-size: 0.90rem;
                 margin-top: 0.5em;
                 margin-left: 0.5em;
+                padding-bottom: 5em;
             }
 
             p {
@@ -202,26 +250,30 @@ header .sticky {
 
 /*SECCIÓN CONTACTO*/
 
-.contact-container{
-    .contact-text{
+.contact-container {
+    .contact-text {
         text-align: center;
         margin-bottom: 3.5em;
         margin-top: 3.5em;
-        h1{
+
+        h1 {
             font-size: 2.5rem;
         }
-        h3{
+
+        h3 {
             font-size: 1.5rem;
         }
     }
-    .contact-form{
+
+    .contact-form {
         max-width: 600px;
         margin: auto;
         margin-bottom: 3em;
         width: 100%;
         display: grid;
         row-gap: 1rem;
-        input{
+
+        input {
             border: none;
             outline: none;
             font-size: 0.9rem;
@@ -229,8 +281,14 @@ header .sticky {
             color: #000;
             background-color: #fff;
             border-radius: 0.4rem;
+            transition: all 400ms;
+
+            &:hover {
+                transform: scale(1.15);
+            }
         }
-        textarea{
+
+        textarea {
             border: none;
             outline: none;
             font-size: 0.9rem;
@@ -238,8 +296,14 @@ header .sticky {
             color: #000;
             background-color: #fff;
             border-radius: 0.4rem;
+            transition: all 400ms;
+
+            &:hover {
+                transform: scale(1.15);
+            }
         }
-        .send-btn{
+
+        .send-btn {
             background-color: #92ad94;
             max-width: 120px;
             font-size: 1rem;
@@ -248,13 +312,14 @@ header .sticky {
             padding: 12px;
             cursor: pointer;
             transition: color 0.8s linear;
-            &:hover{
+
+            &:hover {
                 background-color: #fff;
                 color: #92ad94;
                 transition: 0.5s;
 
             }
-            
+
         }
     }
 }
@@ -275,16 +340,40 @@ footer {
         align-items: center;
 
         .div-footer-1 {
+            display: flex;
+            flex-direction: column;
             font-size: 1.25rem;
 
             h4 {
                 font-weight: 300;
                 letter-spacing: 0.25em;
             }
+
+            a {
+                text-decoration: none;
+                color: #FFF;
+                transition: all 400ms;
+
+                &:hover {
+                    transform: scale(1.15);
+                }
+            }
         }
 
         .div-footer-2 {
             font-size: 1.25rem;
+            display: flex;
+            flex-direction: column;
+
+            a {
+                text-decoration: none;
+                color: #FFF;
+                transition: all 400ms;
+
+                &:hover {
+                    transform: scale(1.15);
+                }
+            }
         }
 
         .linea {
@@ -308,6 +397,11 @@ footer {
 
             li {
                 margin: 2.5em;
+                transition: all 300ms;
+
+                &:hover {
+                    transform: scale(1.50);
+                }
 
                 a {
                     color: #FFF;
