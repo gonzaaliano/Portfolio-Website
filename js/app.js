@@ -27,6 +27,8 @@ function validate() {
     })
 }
 
+// VALIDACION FORMULARIO
+
 validate();
 
 function sendmail(name, email, message) {
