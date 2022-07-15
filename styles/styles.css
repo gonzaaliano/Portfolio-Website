@@ -115,7 +115,7 @@ header .sticky ul li a {
 
 /*SECCIÓN INTRO 2*/
 .intro-2 {
-  background-color: #FFF;
+  background-color: #92ad94;
   color: #000;
   display: flex;
   justify-content: space-evenly;
@@ -163,11 +163,6 @@ header .sticky ul li a {
 }
 .intro-2 h1 {
   font-size: 3rem;
-}
-
-/*SECCIÓN LAST YEARS*/
-.last-years {
-  background-color: #92ad94;
 }
 
 /*SECCIÓN PROJECTS*/
@@ -245,7 +240,7 @@ header .sticky ul li a {
   transition: all 400ms;
 }
 .contact-container .contact-form input:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 .contact-container .contact-form textarea {
   border: none;
@@ -258,7 +253,7 @@ header .sticky ul li a {
   transition: all 400ms;
 }
 .contact-container .contact-form textarea:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 .contact-container .contact-form .send-btn {
   background-color: #92ad94;

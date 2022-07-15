@@ -136,7 +136,7 @@ header .sticky {
 /*SECCIÓN INTRO 2*/
 
 .intro-2 {
-    background-color: #FFF;
+    background-color: #92ad94;
     color: #000;
     display: flex;
     justify-content: space-evenly;
@@ -190,11 +190,6 @@ header .sticky {
     }
 }
 
-/*SECCIÓN LAST YEARS*/
-
-.last-years {
-    background-color: #92ad94;
-}
 
 /*SECCIÓN PROJECTS*/
 
@@ -284,7 +279,7 @@ header .sticky {
             transition: all 400ms;
 
             &:hover {
-                transform: scale(1.15);
+                transform: scale(1.05);
             }
         }
 
@@ -299,7 +294,7 @@ header .sticky {
             transition: all 400ms;
 
             &:hover {
-                transform: scale(1.15);
+                transform: scale(1.05);
             }
         }
 
