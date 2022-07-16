@@ -9,7 +9,7 @@
 }
 
 body {
-  background-color: #000;
+  background-color: #272727;
   min-height: 200vh;
   color: #FFF;
 }
@@ -26,6 +26,7 @@ header {
   transition: 0.6s;
   padding: 40px 100px;
   z-index: 100000;
+  transition: background 250ms ease-in;
 }
 header .logo {
   position: relative;
@@ -75,7 +76,7 @@ header .sticky ul li a {
 
 header .sticky {
   padding: 5px 100px;
-  background-color: #000;
+  background-color: #272727;
 }
 header .sticky ul li a {
   color: #FFF;
@@ -89,9 +90,20 @@ header .sticky ul li a {
   background-size: cover;
 }
 
+.nav-scrolled {
+  background-color: #f5fbef;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+.nav-scrolled a {
+  color: #000;
+}
+.nav-scrolled ul li {
+  color: #000;
+}
+
 /*SECCIÓN INTRO*/
 .intro {
-  background-color: #000;
+  background-color: #272727;
 }
 .intro .intro-text {
   width: 100%;
@@ -167,7 +179,7 @@ header .sticky ul li a {
 
 /*SECCIÓN PROJECTS*/
 .projects {
-  background-color: #fff;
+  background-color: #f5fbef;
   padding-bottom: 3em;
 }
 .projects h1 {
@@ -235,7 +247,7 @@ header .sticky ul li a {
   font-size: 0.9rem;
   padding: 15px;
   color: #000;
-  background-color: #fff;
+  background-color: #f5fbef;
   border-radius: 0.4rem;
   transition: all 400ms;
 }
@@ -248,7 +260,7 @@ header .sticky ul li a {
   font-size: 0.9rem;
   padding: 15px;
   color: #000;
-  background-color: #fff;
+  background-color: #f5fbef;
   border-radius: 0.4rem;
   transition: all 400ms;
 }
@@ -266,7 +278,7 @@ header .sticky ul li a {
   transition: color 0.8s linear;
 }
 .contact-container .contact-form .send-btn:hover {
-  background-color: #fff;
+  background-color: #f5fbef;
   color: #92ad94;
   transition: 0.5s;
 }
