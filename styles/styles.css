@@ -33,8 +33,8 @@ header .logo {
   font-weight: 700;
   color: #FFF;
   text-decoration: none;
-  font-size: 2em;
-  text-transform: uppercase;
+  font-size: 2rem;
+  text-transform: lowercase;
   letter-spacing: 2px;
   transition: ease-in 0.4s;
 }
@@ -68,6 +68,15 @@ header ul li a {
   font-weight: 500px;
   transition: 0.6s;
 }
+header #icon {
+  color: #FFF;
+  font-size: 2rem;
+  line-height: 80px;
+  cursor: pointer;
+  float: right;
+  margin-right: 2em;
+  display: none;
+}
 
 header .sticky .logo,
 header .sticky ul li a {
@@ -100,7 +109,46 @@ header .sticky ul li a {
 .nav-scrolled ul li {
   color: #000;
 }
+.nav-scrolled #icon {
+  color: #000;
+}
 
+@media screen and (max-width: 909px) {
+  header {
+    padding: 0 0 0 0;
+  }
+  header .logo {
+    font-size: 1.5rem;
+    margin-left: 0.75em;
+    margin-right: 1em;
+    margin-top: 0.25em;
+  }
+  header ul {
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #92ad94;
+    top: 3em;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  header ul li {
+    display: block;
+    margin: 1.5em 0em;
+  }
+  header ul li a {
+    font-size: 1.3rem;
+  }
+  header #icon {
+    display: block;
+    margin-right: 1em;
+  }
+  header ul.show {
+    left: 0;
+  }
+}
 /*SECCIÓN INTRO*/
 .intro {
   background-color: #272727;
@@ -127,6 +175,7 @@ header .sticky ul li a {
 
 /*SECCIÓN INTRO 2*/
 .intro-2 {
+  width: 100%;
   background-color: #92ad94;
   color: #000;
   display: flex;
@@ -135,6 +184,7 @@ header .sticky ul li a {
   align-items: flex-start;
 }
 .intro-2 .frontend {
+  width: 100%;
   margin-top: 6em;
   margin-bottom: 10em;
   padding: 1em 1em 1em 1em;
@@ -156,6 +206,7 @@ header .sticky ul li a {
   font-size: 5em;
 }
 .intro-2 .backend {
+  width: 100%;
   margin-top: 6em;
   margin-bottom: 10em;
   padding: 1em 1em 1em 1em;
@@ -177,8 +228,25 @@ header .sticky ul li a {
   font-size: 3rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .intro-2 {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  .intro-2 {
+    flex-direction: column;
+  }
+  .intro-2 .frontend ul {
+    flex-direction: column;
+  }
+  .intro-2 .backend ul {
+    flex-direction: column;
+  }
+}
 /*SECCIÓN PROJECTS*/
 .projects {
+  width: 100%;
   background-color: #f5fbef;
   padding-bottom: 3em;
 }
@@ -221,6 +289,22 @@ header .sticky ul li a {
   margin-bottom: 0.75em;
 }
 
+@media screen and (max-width: 1024px) {
+  .projects .card-container {
+    flex-wrap: wrap;
+  }
+  .projects .card-container .card {
+    margin-bottom: 3em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .projects .card-container {
+    flex-direction: column;
+  }
+  .projects .card-container .card {
+    margin-bottom: 2em;
+  }
+}
 /*SECCIÓN CONTACTO*/
 .contact-container .contact-text {
   text-align: center;
@@ -245,7 +329,7 @@ header .sticky ul li a {
   border: none;
   outline: none;
   font-size: 0.9rem;
-  padding: 15px;
+  padding: 1em;
   color: #000;
   background-color: #f5fbef;
   border-radius: 0.4rem;
@@ -258,7 +342,7 @@ header .sticky ul li a {
   border: none;
   outline: none;
   font-size: 0.9rem;
-  padding: 15px;
+  padding: 1em;
   color: #000;
   background-color: #f5fbef;
   border-radius: 0.4rem;
@@ -352,4 +436,15 @@ footer .redes .lista-redes li:hover {
 footer .redes .lista-redes li a {
   color: #FFF;
   text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+  footer .footer-main {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 2em;
+  }
+  footer .footer-main .div-footer-1 {
+    margin-bottom: 2em;
+  }
 }/*# sourceMappingURL=styles.css.map */

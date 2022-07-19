@@ -72,3 +72,12 @@ function success() {
         icon: "success",
     });
 }
+
+
+// NAV RESPONSIVE
+
+$(document).ready(function() {
+    $('#icon').click(function() {
+        $('ul').toggleClass('show');
+    });
+});

@@ -29,14 +29,13 @@ header {
     padding: 40px 100px;
     z-index: 100000;
     transition: background 250ms ease-in;
-
     .logo {
         position: relative;
         font-weight: 700;
         color: #FFF;
         text-decoration: none;
-        font-size: 2em;
-        text-transform: uppercase;
+        font-size: 2rem;
+        text-transform:lowercase;
         letter-spacing: 2px;
         transition: ease-in 0.4s;
 
@@ -75,6 +74,15 @@ header {
             }
         }
     }
+    #icon {
+        color: #FFF;
+        font-size: 2rem;
+        line-height: 80px;
+        cursor: pointer;
+        float: right;
+        margin-right: 2em;
+        display: none;
+    }
 }
 
 header .sticky .logo,
@@ -96,7 +104,6 @@ header .sticky {
 }
 
 
-
 .banner {
     position: relative;
     width: 100%;
@@ -116,7 +123,50 @@ header .sticky {
             color: #000;
         }
     }
+    #icon{
+        color: #000;
+    }
 }
+
+@media screen and(max-width:909px) {
+    header{
+        padding: 0 0 0 0;
+        .logo{
+            font-size: 1.5rem;
+            margin-left: 0.75em;
+            margin-right: 1em;
+            margin-top:0.25em;
+        }
+        ul{
+            position: fixed;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            background-color: #92ad94;
+            top: 3em;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+            li{
+                display: block;
+                margin: 1.5em 0em;
+                a{
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        #icon{
+            display: block;
+            margin-right: 1em;
+        }
+    }
+    header ul.show{
+        left: 0;
+    }
+}
+
+
+
 
 /*SECCIÓN INTRO*/
 
@@ -150,6 +200,7 @@ header .sticky {
 /*SECCIÓN INTRO 2*/
 
 .intro-2 {
+    width: 100%;
     background-color: #92ad94;
     color: #000;
     display: flex;
@@ -158,6 +209,7 @@ header .sticky {
     align-items: flex-start;
 
     .frontend {
+        width: 100%;
         margin-top: 6em;
         margin-bottom: 10em;
         padding: 1em 1em 1em 1em;
@@ -181,6 +233,7 @@ header .sticky {
     }
 
     .backend {
+        width: 100%;
         margin-top: 6em;
         margin-bottom: 10em;
         padding: 1em 1em 1em 1em;
@@ -204,10 +257,32 @@ header .sticky {
     }
 }
 
+@media screen and(max-width:1024px) {
+    .intro-2{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .intro-2{
+        flex-direction: column;
+        .frontend{
+            ul{
+                flex-direction: column;
+            }
+        }
+        .backend{
+            ul{
+                flex-direction: column;
+            }
+        }
+    }
+}
 
 /*SECCIÓN PROJECTS*/
 
 .projects {
+    width: 100%;
     background-color: #f5fbef;
     padding-bottom: 3em;
 
@@ -257,6 +332,28 @@ header .sticky {
     }
 }
 
+@media screen and (max-width:1024px) {
+    .projects{
+        .card-container{
+            flex-wrap: wrap;
+            .card{
+                margin-bottom: 3em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    .projects{
+        .card-container{
+            flex-direction: column;
+            .card{
+                margin-bottom: 2em;
+            }
+        }
+    }
+}
+
 /*SECCIÓN CONTACTO*/
 
 .contact-container {
@@ -286,7 +383,7 @@ header .sticky {
             border: none;
             outline: none;
             font-size: 0.9rem;
-            padding: 15px;
+            padding: 1em;
             color: #000;
             background-color: #f5fbef;
             border-radius: 0.4rem;
@@ -301,7 +398,7 @@ header .sticky {
             border: none;
             outline: none;
             font-size: 0.9rem;
-            padding: 15px;
+            padding: 1em;
             color: #000;
             background-color: #f5fbef;
             border-radius: 0.4rem;
@@ -416,6 +513,19 @@ footer {
                     color: #FFF;
                     text-decoration: none;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    footer{
+        .footer-main{
+            align-items: flex-start;
+            flex-direction: column;
+            margin-left: 2em;
+            .div-footer-1{
+                margin-bottom: 2em;
             }
         }
     }
