@@ -115,7 +115,7 @@ header .sticky ul li a {
 
 @media screen and (max-width: 909px) {
   header {
-    padding: 0 0 0 0;
+    padding: 0em 0em 0em 0em;
   }
   header .logo {
     font-size: 1.5rem;
