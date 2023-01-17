@@ -81,3 +81,9 @@ $(document).ready(function() {
         $('ul').toggleClass('show');
     });
 });
+
+$(document).ready(function() {
+    $('#cross-icon').click(function() {
+        $('ul').toggleClass('show');
+    });
+});

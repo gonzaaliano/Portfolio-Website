@@ -29,13 +29,14 @@ header {
     padding: 40px 100px;
     z-index: 100000;
     transition: background 250ms ease-in;
+
     .logo {
         position: relative;
         font-weight: 700;
         color: #FFF;
         text-decoration: none;
         font-size: 2rem;
-        text-transform:lowercase;
+        text-transform: lowercase;
         letter-spacing: 2px;
         transition: ease-in 0.4s;
 
@@ -51,6 +52,16 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        #cross-icon {
+            color: #272727;
+            font-size: 2rem;
+            line-height: 80px;
+            cursor: pointer;
+            float: right;
+            margin-right: 2em;
+            display: none;
+        }
 
         li {
             list-style: none;
@@ -74,6 +85,7 @@ header {
             }
         }
     }
+
     #icon {
         color: #FFF;
         font-size: 2rem;
@@ -83,6 +95,7 @@ header {
         margin-right: 2em;
         display: none;
     }
+
 }
 
 header .sticky .logo,
@@ -112,59 +125,77 @@ header .sticky {
     background-size: cover;
 }
 
-.nav-scrolled{
+.nav-scrolled {
     background-color: #f5fbef;
     box-shadow: 0 3px 20px rgba($color: black, $alpha: 0.2);
-    a{
+
+    a {
         color: #000;
     }
-    ul{
-        li{
+
+    ul {
+        li {
             color: #000;
         }
     }
-    #icon{
+
+    #icon {
         color: #000;
     }
 }
 
 @media screen and(max-width:909px) {
-    header{
+    header {
         padding: 0em 0em 0em 0em;
-        .logo{
+
+        .logo {
             font-size: 1.5rem;
             margin-left: 0.75em;
             margin-right: 1em;
-            margin-top:0.25em;
+            margin-top: 0.75em;
         }
-        ul{
+
+        ul {
             position: fixed;
             flex-direction: column;
             width: 100%;
             height: 100vh;
             background-color: #92ad94;
-            top: 3em;
-            left: -100%;
+            top: -1.50em;
+            right: -100%;
             text-align: center;
             transition: all .5s;
-            li{
+
+            #cross-icon{
                 display: block;
-                margin: 1.5em 0em;
-                a{
+                font-size: 3rem;
+                margin-left: 6em;
+                margin-top: 0.25em;
+            }
+
+            li {
+                display: block;
+                margin-top: 3.75em;
+                margin-right: 3em;
+
+
+                a {
                     font-size: 1.3rem;
                 }
             }
         }
-        #icon{
+
+        #icon {
             display: block;
             margin-right: 1em;
+            margin-top: 0.5em;
         }
     }
-    header ul.show{
-        left: 0;
+
+    header ul.show {
+        right: -15%;
     }
 }
-
 
 
 
@@ -193,6 +224,15 @@ header .sticky {
             margin-bottom: 3em;
             width: 95%;
         }
+    }
+
+    .scroll-up {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        position: sticky;
+        background-color: #92ad94;
+        border-radius: 10em;
     }
 }
 
@@ -223,9 +263,11 @@ header .sticky {
             flex-direction: row;
             align-items: center;
             margin-top: 1.5em;
-            .icons{
+
+            .icons {
                 margin-right: 5em;
-                box-icon{
+
+                box-icon {
                     font-size: 5em;
                 }
             }
@@ -239,14 +281,16 @@ header .sticky {
         padding: 1em 1em 1em 1em;
         justify-content: flex-start;
         align-items: flex-start;
-        ul{
+
+        ul {
             list-style: none;
             display: flex;
             justify-content: center;
             flex-direction: row;
             align-items: center;
             margin-top: 1.5em;
-            .icons{
+
+            .icons {
                 margin-right: 3em;
             }
         }
@@ -258,21 +302,23 @@ header .sticky {
 }
 
 @media screen and(max-width:1024px) {
-    .intro-2{
+    .intro-2 {
         flex-direction: column;
     }
 }
 
 @media screen and (max-width:480px) {
-    .intro-2{
+    .intro-2 {
         flex-direction: column;
-        .frontend{
-            ul{
+
+        .frontend {
+            ul {
                 flex-direction: column;
             }
         }
-        .backend{
-            ul{
+
+        .backend {
+            ul {
                 flex-direction: column;
             }
         }
@@ -333,10 +379,11 @@ header .sticky {
 }
 
 @media screen and (max-width:1024px) {
-    .projects{
-        .card-container{
+    .projects {
+        .card-container {
             flex-wrap: wrap;
-            .card{
+
+            .card {
                 margin-bottom: 3em;
             }
         }
@@ -344,10 +391,11 @@ header .sticky {
 }
 
 @media screen and (max-width:480px) {
-    .projects{
-        .card-container{
+    .projects {
+        .card-container {
             flex-direction: column;
-            .card{
+
+            .card {
                 margin-bottom: 2em;
             }
         }
@@ -519,12 +567,13 @@ footer {
 }
 
 @media screen and (max-width:480px) {
-    footer{
-        .footer-main{
+    footer {
+        .footer-main {
             align-items: flex-start;
             flex-direction: column;
             margin-left: 2em;
-            .div-footer-1{
+
+            .div-footer-1 {
                 margin-bottom: 2em;
             }
         }
